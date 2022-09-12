@@ -1,17 +1,23 @@
 import React from 'react';
-import './App.css';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Home from "./components/Home"
+import Home from './components/Home';
+import Random from './components/Random';
+import Search from './components/Search';
+import NavBar from './components/NavBar';
+import {Route, Routes} from 'react-router-dom';
 
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Home />
-      <Footer />
-    </div>
+    <>
+      <NavBar />
+      <div className='container'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/random' element={<Random />} />
+          <Route path='/search' element={<Search />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 
