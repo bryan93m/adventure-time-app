@@ -3,7 +3,8 @@ import React from 'react';
 function Footer(props) {
     return (
         <div>
-            <p>Footer</p>
+            <p>Flatiron School, 2022</p>
+            <p>About Us</p>
         </div>
     );
 }

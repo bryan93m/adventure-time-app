@@ -10,7 +10,6 @@ function App() {
     <div>
       <Header />
       <Home />
-      <h1>Adventure Time!</h1>
       <Footer />
     </div>
   );
