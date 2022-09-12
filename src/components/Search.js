@@ -2,9 +2,15 @@ import React from 'react'
 
 const Search = () => {
   return (
-    <div>
+    <>
         <h1>Search</h1>
-    </div>
+        <div>
+          <input
+          type='text'
+          placeholder='Search Names...'
+          />
+        </div>
+    </>
   )
 }
 

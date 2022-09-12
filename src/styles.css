@@ -5,7 +5,7 @@
 body{
     margin:0;
 }
-
+/* nav styles */
 .nav{
     background-color: none;
     color: #171717;
@@ -45,3 +45,4 @@ body{
     background-color: #777;
 }
 
+/* form styles */

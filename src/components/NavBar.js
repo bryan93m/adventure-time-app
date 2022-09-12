@@ -9,6 +9,7 @@ function NavBar() {
             <ul>
                 <CustomLink to='/random'>Random</CustomLink>
                 <CustomLink to='/search'>Search</CustomLink>
+                <CustomLink to='/newcharacter'>New Character</CustomLink>
             </ul>
         </nav>
     );
