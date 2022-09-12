@@ -46,3 +46,15 @@ body{
 }
 
 /* form styles */
+
+
+
+
+/* homepage styles */
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
