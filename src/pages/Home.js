@@ -12,7 +12,7 @@ function Home({characters}) {
                         <CharacterCard key={character.id} character={character} />
                     ))}
                 </div>          
-            <Footer />
+            <Footer className='footer__component' />
         </div>
     );
 }

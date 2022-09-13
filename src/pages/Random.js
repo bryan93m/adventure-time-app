@@ -12,9 +12,9 @@ const Random = ({characters}) => {
     <>
     <div className='random__header'>
         <h1>Random</h1>
-        <button onClick={handleClick}>Randomize!</button>  
+        <button className='form__button' onClick={handleClick}>Randomize!</button>  
     </div>
-    <div>
+    <div className='random__container'>
         {characters.map(character => {
           if (character.id === chosenCharacterId) {
             return <CharacterCard key={character.id} character={character} />

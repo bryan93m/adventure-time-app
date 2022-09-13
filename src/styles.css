@@ -82,7 +82,7 @@ h3 {
 }
 
 .card {
-    background-color:  #FFFDF1;
+    background-color:  #f8f4e5;
     display: inline-block;
     width: 40vw;
     filter: opacity(90%);
@@ -153,6 +153,8 @@ img {
   border: 2px solid black;
   box-shadow: 15px 15px 1px #cd93f9, 15px 15px 1px 2px black;
   opacity: 90%;
+  width: 1000px;
+  margin: auto;
 }
 
 input, textarea {
@@ -165,7 +167,7 @@ input, textarea {
     border: none;
     border-bottom: 5px solid black;
     background: #f8f4e5;
-    min-width: 250px;
+    min-width: 100px;
     padding-left: 5px;
     outline: none;
     color: black;
@@ -218,3 +220,16 @@ textarea:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+/*random character page styles*/
+
+.random__container{
+  background: #f8f4e5;
+  padding: 50px 100px;
+  border: 2px solid black;
+  box-shadow: 15px 15px 1px #cd93f9, 15px 15px 1px 2px black;
+  opacity: 90%;
+  width: 1000px;
+  margin: auto;
+}
+
