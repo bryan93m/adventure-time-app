@@ -10,7 +10,6 @@ body{
     background-image: url("https://images8.alphacoders.com/442/442432.jpg");
     background-size: 200%; 
     background-position: center;
-    display: flex;
     background-attachment: fixed;
 }
 
@@ -22,7 +21,7 @@ body{
     justify-content: space-between;
     align-items: stretch;
     gap: 2rem;
-    padding: 0 1rem;
+    padding: 2rem;
 }
 
 .nav ul{
@@ -48,6 +47,12 @@ body{
 
 .nav li:hover{
     background-color: #777;
+}
+
+.logo {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* form styles */
@@ -79,3 +84,9 @@ h3 {
     border-radius: 2px;
 }
 
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
