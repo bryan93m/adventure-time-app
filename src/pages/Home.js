@@ -1,6 +1,7 @@
 import Footer from '../components/Footer';
 import CharacterCard from '../components/CharacterCard';
 
+
 function Home({characters}) {
     
 

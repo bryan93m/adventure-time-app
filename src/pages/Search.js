@@ -18,7 +18,7 @@ const Search = ({characters}) => {
   return (
     <>
         <h1>Search</h1>
-        <div>
+        <div className='search__list'>
             <SearchBar onSearch={setSearch}/>
             <div className="column">
              <SearchItems characters={displayCharacters}/>

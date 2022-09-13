@@ -109,3 +109,36 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+/* search styles */
+
+.search__list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+/* aboutpage styles */
+
+.about {
+    margin: 2rem 0;
+    width: 100%;
+  }
+  
+  .about__title {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+  
+  .about__info {
+    width: 500px;
+    margin: auto;
+  }
+  
+  .about__info > p {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  
+  .about__info > div > ul > li {
+    margin-left: 2rem;
+    padding: 0.5rem;
+  }

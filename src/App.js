@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Random from './pages/Random';
 import Search from './pages/Search';
 import NewCharacter from './pages/NewCharacter';
+import About from './pages/About';
 
 
 function App() {
@@ -44,6 +45,7 @@ const createCharacter = (newCharacter) => {
           <Route path='/random' element={<Random characters={characters}/> } />
           <Route path='/search' element={<Search characters={characters}/>} />
           <Route path='/newcharacter' element={<NewCharacter createCharacter={createCharacter}/>} />
+          <Route path='/about' element={<About />} />
         </Routes>
       </div>
     </>
