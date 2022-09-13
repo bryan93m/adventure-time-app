@@ -42,7 +42,7 @@ const createCharacter = (newCharacter) => {
       <div className='container'>
         <Routes>
           <Route path='/' element={<Home characters={characters}/>} />
-          <Route path='/random' element={<Random />} />
+          <Route path='/random' element={<Random characters={characters}/> } />
           <Route path='/search' element={<Search />} />
           <Route path='/newcharacter' element={<NewCharacter createCharacter={createCharacter}/>} />
         </Routes>
