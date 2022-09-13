@@ -1,23 +1,28 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
 *{
     box-sizing: border-box;
+    font-family: Inter, sans-serif;
 }
 
 body{
     margin:0;
+    background-image: url("https://images8.alphacoders.com/442/442432.jpg");
+    background-size: 200%; 
+    background-position: center;
 }
+
 /* nav styles */
 .nav{
     background-color: none;
-    color: #171717;
+    color: #103136;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     gap: 2rem;
     padding: 0 1rem;
 }
-
-
-
 
 .nav ul{
     padding: 0;
@@ -26,7 +31,6 @@ body{
     display: flex;
     gap: 1rem;
 }
-
 
 .nav a{
     color: inherit;
@@ -48,13 +52,11 @@ body{
 /* form styles */
 
 
-
-
-/* homepage styles */
-.row {
-    display: flex;
+.information {
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
-.column {
-    flex: 50%;
+.charInfo {
+    font-weight: regular;
 }
