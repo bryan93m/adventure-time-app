@@ -5,14 +5,12 @@ function Home({characters}) {
     
 
     return (
-        <div className="row">
-            <div className="column">
-                <div>
+        <div className="homepage">
+                <div className='homepage__list'>
                     {characters.map(character => (
                         <CharacterCard key={character.id} character={character} />
                     ))}
-                </div>
-            </div>
+                </div>          
             <Footer />
         </div>
     );

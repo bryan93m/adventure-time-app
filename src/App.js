@@ -12,7 +12,6 @@ import NewCharacter from './pages/NewCharacter';
 
 function App() {
   const [characters, setCharacters] = useState([]);
-  const [search, setSearch] = useState('');
 
   useEffect(() => {
     axios.get('http://localhost:3000/characters')
@@ -43,7 +42,7 @@ const createCharacter = (newCharacter) => {
         <Routes>
           <Route path='/' element={<Home characters={characters}/>} />
           <Route path='/random' element={<Random characters={characters}/> } />
-          <Route path='/search' element={<Search />} />
+          <Route path='/search' element={<Search characters={characters}/>} />
           <Route path='/newcharacter' element={<NewCharacter createCharacter={createCharacter}/>} />
         </Routes>
       </div>

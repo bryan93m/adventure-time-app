@@ -1,14 +1,28 @@
-import React from 'react'
+import React, {useState} from 'react'
+import SearchBar from '../components/SearchBar'
+import SearchItems from '../components/SearchItems'
 
-const Search = () => {
+
+
+
+
+
+const Search = ({characters}) => {
+  const [search, setSearch] = useState('')
+
+  const displayCharacters = characters.filter(character => {
+    return character.displayName.toLowerCase().includes(search.toLowerCase())|| 
+    character.fullName.toLowerCase().includes(search.toLowerCase())
+  })
+
   return (
     <>
         <h1>Search</h1>
         <div>
-          <input
-          type='text'
-          placeholder='Search Names...'
-          />
+            <SearchBar onSearch={setSearch}/>
+            <div className="column">
+             <SearchItems characters={displayCharacters}/>
+            </div>
         </div>
     </>
   )

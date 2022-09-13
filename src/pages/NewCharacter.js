@@ -81,7 +81,7 @@ const NewCharacter = ({createCharacter}) => {
                 name="sex" 
                 placeholder="Enter Sex" 
             />
-            <input 
+            <textarea 
                 onChange={handleChange}
                 value={formData.quotes}
                 type="text" 
