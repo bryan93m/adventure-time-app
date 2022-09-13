@@ -9,6 +9,7 @@ import Random from './pages/Random';
 import Search from './pages/Search';
 import NewCharacter from './pages/NewCharacter';
 import About from './pages/About';
+import SplashPage from './pages/SlashPage';
 
 
 function App() {
@@ -40,8 +41,9 @@ const createCharacter = (newCharacter) => {
     <>
       <NavBar />
       <div className='container'>
-        <Routes>
-          <Route path='/' element={<Home characters={characters}/>} />
+        <Routes>  
+          <Route path='/' element={<SplashPage />} />
+          <Route path='/home' element={<Home characters={characters}/>} />
           <Route path='/random' element={<Random characters={characters}/> } />
           <Route path='/search' element={<Search characters={characters}/>} />
           <Route path='/newcharacter' element={<NewCharacter createCharacter={createCharacter}/>} />

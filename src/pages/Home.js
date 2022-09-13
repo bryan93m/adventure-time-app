@@ -6,14 +6,17 @@ function Home({characters}) {
     
 
     return (
+        <>
         <div className="homepage">
                 <div className='homepage__list'>
                     {characters.map(character => (
                         <CharacterCard key={character.id} character={character} />
                     ))}
                 </div>          
-            <Footer className='footer__component' />
+            
         </div>
+        <Footer className='footer__component' />
+        </>
     );
 }
 
