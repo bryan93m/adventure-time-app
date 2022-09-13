@@ -4,7 +4,6 @@ import CharacterCard from '../components/CharacterCard';
 
 function Home({characters}) {
     
-
     return (
         <div className="homepage">
                 <div className='homepage__list'>
