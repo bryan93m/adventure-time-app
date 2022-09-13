@@ -13,7 +13,10 @@ function CharacterCard({character}) {
                     <p className="information">FULL NAME:</p><span className="charInfo">{character.fullName}</span>
                     <p className="information">SPECIES:</p><span className="charInfo">{character.species}</span>
                     <p className="information">SEX:</p><span className="charInfo">{character.sex}</span>
-                    <p className='information'>QUOTES:</p>{quotes.map(quote => <p key={quote}>{quote}</p>)}
+                    <p className="information">QUOTES:</p>
+                    <div className='quoteSection'>
+                        {quotes.map(quote => <p className="quotes" key={quote}>{quote}</p>)}
+                    </div>
                 </div>
         </div>
     );

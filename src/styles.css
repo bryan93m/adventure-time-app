@@ -62,12 +62,6 @@ body{
 
 /* form styles */
 
-
-card {
-    background-color: #FFFDF1;
-    width: 30vw;
-}
-
 .information {
     font-weight: bold;
     text-transform: capitalize;
@@ -79,11 +73,18 @@ card {
 
 h3 {
     font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.quotes {
+  font-weight: regular;
+  font-size: 14px;
+  padding: 10px;
 }
 
 .card {
     background-color:  #f8f4e5;
-    display: inline-block;
+    display: inline-flex;
     width: 40vw;
     filter: opacity(90%);
     padding-top: 40px;
@@ -109,6 +110,13 @@ img {
 .homepage__list{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.footer_container {
+  background-color: #029ac3;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* search styles */
