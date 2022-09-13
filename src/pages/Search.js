@@ -12,14 +12,15 @@ const Search = ({characters}) => {
 
   const displayCharacters = characters.filter(character => {
     return character.displayName.toLowerCase().includes(search.toLowerCase())|| 
-    character.fullName.toLowerCase().includes(search.toLowerCase())
+    character.fullName.toLowerCase().includes(search.toLowerCase())||
+    character.species.toLowerCase().includes(search.toLowerCase())
   })
 
   return (
     <>
         <h1>Search</h1>
         <div className='search__list'>
-            <SearchBar onSearch={setSearch}/>
+            <SearchBar search={search} onSearch={setSearch}/>
             <div className="column">
              <SearchItems characters={displayCharacters}/>
             </div>

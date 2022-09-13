@@ -45,7 +45,7 @@ const NewCharacter = ({createCharacter}) => {
   return (
     <div>
         <h1>New Character</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='new__container'>
             <input
                 onChange={handleChange}
                 value={formData.displayName}
@@ -88,7 +88,7 @@ const NewCharacter = ({createCharacter}) => {
                 name="quotes" 
                 placeholder="enter quotes" 
             />
-            <button type='submit'>Add Character</button>
+            <button className='form__button' type='submit'>Add Character</button>
         </form>
     </div>
   )

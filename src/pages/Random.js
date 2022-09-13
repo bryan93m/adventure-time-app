@@ -9,15 +9,19 @@ const Random = ({characters}) => {
   }
 
   return (
-    <div>
+    <>
+    <div className='random__header'>
         <h1>Random</h1>
-        <button onClick={handleClick}>Randomize!</button>
+        <button onClick={handleClick}>Randomize!</button>  
+    </div>
+    <div>
         {characters.map(character => {
           if (character.id === chosenCharacterId) {
             return <CharacterCard key={character.id} character={character} />
            }
         })}
-    </div>
+      </div>
+    </>
   )
 }
 
