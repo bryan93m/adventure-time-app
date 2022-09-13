@@ -1,10 +1,11 @@
-import {Link, useMatch, useResolvedPath } from 'react-router-dom';
+import { Link, useMatch, useResolvedPath } from 'react-router-dom';
+import AdventureLogo from '../pages/assets/AdventureLogo.png'
 
 function NavBar() {
     return (
         <nav className='nav'>
             <Link to='/home' className='nav__link logo'>
-                Adventure Time
+                <img alt='logo' src={AdventureLogo} />
             </Link>
             <ul>
                 <CustomLink to='/random'>Random</CustomLink>

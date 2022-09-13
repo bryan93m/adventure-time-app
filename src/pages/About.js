@@ -10,7 +10,7 @@ const About = () => {
             <p>Flatiron School Project Created By:</p>
             <ul>
                 <li>Megan Moulos</li>
-                <li>Teejay Wright</li>
+                <li>Teejay Dixon</li>
                 <li>Bryan Meadows</li>
             </ul>
         </div>
