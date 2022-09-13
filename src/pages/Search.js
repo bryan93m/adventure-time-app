@@ -2,6 +2,11 @@ import React, {useState} from 'react'
 import SearchBar from '../components/SearchBar'
 import SearchItems from '../components/SearchItems'
 
+
+
+
+
+
 const Search = ({characters}) => {
   const [search, setSearch] = useState('')
 
