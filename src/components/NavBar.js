@@ -8,11 +8,11 @@ function NavBar() {
             <Link to='/home' className='nav__link logo'>
                 <img alt='logo' src={AdventureLogo} style={{width: 150}}/>
             </Link>
-            <ul>
-                <CustomLink to='/random'>Random</CustomLink>
-                <CustomLink to='/search'>Search</CustomLink>
-                <CustomLink to='/newcharacter'>New Character</CustomLink>
-            </ul>
+                <ul>
+                    <CustomLink to='/random'>Random</CustomLink>
+                    <CustomLink to='/search'>Search</CustomLink>
+                    <CustomLink to='/newcharacter'>New Character</CustomLink>
+                </ul>
         </nav>
     );
 }

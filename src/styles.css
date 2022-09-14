@@ -43,9 +43,7 @@ body{
     margin: 0;
     list-style: none;
     display: flex;
-    gap: 1rem;
-    
-    
+    gap: 1rem;    
 }
 
 .nav a{
@@ -97,6 +95,14 @@ h3 {
     padding-bottom: 1rem;
     font-family: 'Staatliches', cursive;
 }
+
+h4 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  font-family: 'Staatliches', cursive;
+}
+
+
 
 .quotes {
   font-weight: regular;
@@ -152,7 +158,7 @@ img {
 .about {
     margin: 2rem 0;
     width: 100%;
-   
+    display: flex;
   }
   
   .about__title {
@@ -161,18 +167,15 @@ img {
   }
   
   .about__info {
-    width: 500px;
+    width: 900px;
     margin: auto;
     background-color: #95a4ff;
-    
-    
+    padding: 50px;
   }
   
   .about__info > p {
     font-size: 1.4rem;
     margin: 1rem 0;
-    
-    
   }
   
   .about__info > div > ul > li {
@@ -184,6 +187,22 @@ img {
     list-style-type: none;
   }
 
+  .profile-pic {
+    border-radius: 2px;
+    padding: 5px;
+  }
+  
+  .profiles {
+    display: flex;
+    justify-content: center;
+  }
+
+  .person {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 
 /* NewCharacter page styles */
 
