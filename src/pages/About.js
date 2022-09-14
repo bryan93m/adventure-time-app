@@ -1,5 +1,6 @@
 import megPic from "../pages/assets/meadventuretime.png"
 import lemon from "../pages/assets/lemongrab.jpg"
+import bryanPic from "../pages/assets/bryanPic.png"
 
 const About = () => {
   return (
@@ -24,7 +25,7 @@ const About = () => {
                   </li>
                   <li className="person">
                     <h4>Bryan Meadows</h4>
-                    <img className="profile-pic" src={lemon} alt="lemongrab" />
+                    <img className="profile-pic" src={bryanPic} alt="Bryan" />
                     <a href="https://github.com/bryan93m">Bryan's Github</a>
                   </li>
               </ul>
