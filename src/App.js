@@ -12,6 +12,7 @@ import About from './pages/About';
 import SplashPage from './pages/SlashPage';
 
 
+
 function App() {
   const [characters, setCharacters] = useState([]);
 

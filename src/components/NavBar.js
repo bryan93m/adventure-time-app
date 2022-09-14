@@ -1,6 +1,7 @@
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import AdventureLogo from '../pages/assets/AdventureLogo.png'
 
+
 function NavBar() {
     return (
         <nav className='nav'>

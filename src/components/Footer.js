@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 function Footer(props) {
     return (
         <div className='footer_container'>
-            <p>Flatiron School, 2022</p>
-            <Link to='/about'>About</Link>
+            <p className="school">© Flatiron School <span className="schoolyear">2022</span></p>
+            <Link className='aboutbtn' to='/about'>About</Link>
         </div>
     );
 }
