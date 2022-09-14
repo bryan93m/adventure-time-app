@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import axios from 'axios';
 
 const defaultCharacter = {
     displayName: '',
@@ -12,8 +13,11 @@ const defaultCharacter = {
 
 const NewCharacter = ({createCharacter}) => {
    const [formData, setFormData] = useState(defaultCharacter)
+   
 
-   function handleChange(e){
+   
+
+function handleChange(e){
     setFormData({
         ...formData,
         [e.target.name]: e.target.value
@@ -27,6 +31,18 @@ const NewCharacter = ({createCharacter}) => {
     }
    }
 
+
+   const uploadImage = async (e) => {
+         const files = e.target.files;
+         const data = new FormData();
+         data.append('file', files[0]);
+         data.append('upload_preset', 'qj0obv6x');
+         const res = await axios.post('https://api.cloudinary.com/v1_1/dtengdkya/image/upload', data);
+         setFormData({
+              ...formData,
+              sprite: res.data.secure_url
+         })
+   }
    
 
     function handleSubmit(e){
@@ -61,11 +77,11 @@ const NewCharacter = ({createCharacter}) => {
                 placeholder="Enter Full Name" 
             />
             <input 
-                onChange={handleChange}
-                value={formData.sprite}
-                type="text" 
+                onChange={uploadImage}
+                files={formData.sprite}
+                type="file"
                 name="sprite" 
-                placeholder="Enter Image URL" 
+                placeholder="Enter Image URL"
             />
             <input 
                 onChange={handleChange}

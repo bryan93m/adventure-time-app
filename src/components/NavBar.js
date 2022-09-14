@@ -6,7 +6,7 @@ function NavBar() {
     return (
         <nav className='nav'>
             <Link to='/home' className='nav__link logo'>
-                <img alt='logo' src={AdventureLogo} />
+                <img alt='logo' src={AdventureLogo} style={{width: 150}}/>
             </Link>
             <ul>
                 <CustomLink to='/random'>Random</CustomLink>
