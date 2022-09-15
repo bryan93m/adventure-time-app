@@ -14,7 +14,6 @@ import SplashPage from './pages/SlashPage';
 
 function App() {
   const [characters, setCharacters] = useState([]);
-  const [comments, setComments] = useState([])
 
   useEffect(() => {
     axios.get('http://localhost:5555/characters')
