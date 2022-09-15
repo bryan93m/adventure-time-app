@@ -12,7 +12,6 @@ import About from './pages/About';
 import SplashPage from './pages/SlashPage';
 
 
-
 function App() {
   const [characters, setCharacters] = useState([]);
 
@@ -31,12 +30,12 @@ const createCharacter = (newCharacter) => {
   })
 }
 
-
-
-
-
-
-
+const createComment = (newComment, id) => {
+  console.log(newComment, id)
+  axios.patch(`http://localhost:3000/characters/${id}`, newComment)
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
 
   return (
     <>
@@ -44,7 +43,7 @@ const createCharacter = (newCharacter) => {
       <div className='container'>
         <Routes>  
           <Route path='/' element={<SplashPage />} />
-          <Route path='/home' element={<Home characters={characters}/>} />
+          <Route path='/home' element={<Home characters={characters} createComment={createComment}/>} />
           <Route path='/random' element={<Random characters={characters}/> } />
           <Route path='/search' element={<Search characters={characters}/>} />
           <Route path='/newcharacter' element={<NewCharacter createCharacter={createCharacter}/>} />

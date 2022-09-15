@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import CharacterCard from '../components/CharacterCard';
 
 
-function Home({characters}) {
+function Home({characters, createComment}) {
     const [sortBy, setSortBy] = useState(true)
 
     function changeFilter(e){
@@ -26,7 +26,7 @@ function Home({characters}) {
             </div>  
             <div className='homepage__list'>    
                 {characters.map(character => (
-                    <CharacterCard key={character.id} character={character} />
+                    <CharacterCard key={character.id} character={character} createComment={createComment} />
                 ))}
             </div>          
         </div>

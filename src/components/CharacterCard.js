@@ -1,12 +1,39 @@
 import React, {useState} from 'react';
 
-function CharacterCard({character}) {
+function CharacterCard({character, createComment}) {
+    const commentData = {
+        name: "",
+        comment: "",
+    }
+
     const [toggleQuotes, setToggleQuotes] = useState(false)
+    const [toggleComments, setToggleComments] = useState(false)
+    const [formData, setFormData] = useState(commentData)
 
     const quotes = character.quotes
 
     function handleToggle(){
         setToggleQuotes(!toggleQuotes)
+    }
+
+    function handleCommentToggle(){
+        setToggleComments(!toggleComments)
+    }
+
+    function handleChange(e){
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    function handleSubmit(e){
+        e.preventDefault()
+        createComment({
+            name: formData.name,
+            comment: formData.comment,
+        }, character.id)
+        setFormData(commentData)
     }
 
     return (
@@ -22,17 +49,45 @@ function CharacterCard({character}) {
                 </div>
                 <div className="card-center">
                     <button className="toggle-button" onClick={handleToggle}>Click to see quotes</button>
-                    {toggleQuotes ? (
-                            <div>
-                                <p className="information">QUOTES:</p>
-                                <div className='quoteSection'>
-                                    {quotes.map(quote => <p className="quotes" key={quote}>{quote}</p>)}
-                                </div>
-                            </div>) 
-                            : 
-                            ( null )
-                        }
+                    <button className="toggle-button" onClick={handleCommentToggle}>Click to see comments</button>
                 </div>
+                <div> 
+                    {toggleQuotes ? (
+                        <div>
+                            <p className="information">QUOTES:</p>
+                            <div className='quoteSection'>
+                                {quotes.map(quote => <p className="quotes" key={quote}>{quote}</p>)}
+                            </div>
+                        </div>) 
+                        : 
+                        ( null )
+                    }
+                    {toggleComments ? (
+                        <div>
+                            <p>Name: {character.name}</p>
+                            <p>Comment: {character.comment}</p>
+                            <form onSubmit={handleSubmit}>
+                                <input 
+                                    type="text"
+                                    placeholder="Enter your name..."
+                                    name="name"
+                                    onChange={handleChange}
+                                    value={formData.name}
+                                />
+                                <input 
+                                    type="text"
+                                    placeholder="Enter your comment..."
+                                    name="comment"
+                                    onChange={handleChange}
+                                    value={formData.comment}
+                                />
+                                <button type="submit">Submit Comment</button>
+                            </form>
+                        </div>)
+                        :
+                        ( null )
+                    } 
+                </div>   
         </div>
     );
 }

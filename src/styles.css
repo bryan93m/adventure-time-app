@@ -144,6 +144,20 @@ img {
   color: white;
 }
 
+.card-center {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  width: 30vw;
+}
+
+.card-right {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
 /* Home page styles */
 .homepage__list{
     display: grid;
