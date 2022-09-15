@@ -16,7 +16,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5555/characters')
+    axios.get(`${process.env.REACT_APP_API_URL}/characters`)
     .then(res => {
       setCharacters(res.data)
     })
@@ -24,19 +24,17 @@ function App() {
   }, []);
 
 const createCharacter = (newCharacter) => {
-  axios.post('http://localhost:5555/characters', newCharacter)
+  axios.post(`${process.env.REACT_APP_API_URL}/characters`, newCharacter)
   .then(res => {
     setCharacters(prevCharacters => [...prevCharacters, res.data])
   })
 }
 
-const createComment = (newComment, character) => {
-  let id = character.id 
-  const patchBody = character.comments ? 
-    ({ comments: [...character.comments, newComment] }) 
-    : 
-    ({comments : [newComment]})
-    axios.patch(`http://localhost:5555/characters/${id}`, patchBody)
+const createComment = (newComment, id) => {
+  console.log(newComment, id)
+  axios.patch(`${process.env.REACT_APP_API_URL}/characters/${id}`, newComment)
+    .then(res => res.json())
+    .then(data => console.log(data))
 }
 
   return (
