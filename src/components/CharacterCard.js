@@ -1,7 +1,13 @@
 import React, {useState} from 'react';
 
 function CharacterCard({character}) {
+    const [toggleQuotes, setToggleQuotes] = useState(false)
+
     const quotes = character.quotes
+
+    function handleToggle(){
+        setToggleQuotes(!toggleQuotes)
+    }
 
     return (
         <div className="card">
@@ -13,10 +19,19 @@ function CharacterCard({character}) {
                     <p className="information">FULL NAME:</p><span className="charInfo">{character.fullName}</span>
                     <p className="information">SPECIES:</p><span className="charInfo">{character.species}</span>
                     <p className="information">SEX:</p><span className="charInfo">{character.sex}</span>
-                    <p className="information">QUOTES:</p>
-                    <div className='quoteSection'>
-                        {quotes.map(quote => <p className="quotes" key={quote}>{quote}</p>)}
-                    </div>
+                </div>
+                <div className="card-center">
+                    <button className="toggle-button" onClick={handleToggle}>Click to see quotes</button>
+                    {toggleQuotes ? (
+                            <div>
+                                <p className="information">QUOTES:</p>
+                                <div className='quoteSection'>
+                                    {quotes.map(quote => <p className="quotes" key={quote}>{quote}</p>)}
+                                </div>
+                            </div>) 
+                            : 
+                            ( null )
+                        }
                 </div>
         </div>
     );
