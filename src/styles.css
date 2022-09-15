@@ -110,7 +110,8 @@ h4 {
 
 .card {
     background-color:  #f8f4e5;
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
     width: 40vw;
     filter: opacity(90%);
     padding-top: 40px;
@@ -132,6 +133,17 @@ h4 {
 img {
     width: 200px;
 }
+
+.toggle-button {
+  font-family:  'Staatliches';
+  font-size: 1rem;
+  padding: 10px;
+  background-color: #029ac3;
+  border: none;
+  border-radius: 2px;
+  color: white;
+}
+
 /* Home page styles */
 .homepage__list{
     display: grid;
