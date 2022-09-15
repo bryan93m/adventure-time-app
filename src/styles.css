@@ -58,7 +58,7 @@ body{
 }
 
 .nav li.active{
-    background-color: #ff5edc5b;
+    color: #ff5edc5b;
     
 }
 
@@ -304,12 +304,13 @@ video{
 
 .btn{
   display: flex;
-  margin-left: 40%;
-  margin-right: 40%;
+  margin-left: 45%;
+  margin-right: 45%;
+  text-align: center;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: #95a4ff;
+  background: none;
   color: #fff;
   font-size: 25px;
   cursor: pointer;
@@ -319,8 +320,9 @@ video{
 }
 
 .btn:hover{
-  background: #cd93f9;
-  color: #fff;
+  background: none;
+  
+  color: #95a4ff;
 }
 
 .aboutbtn{

@@ -17,7 +17,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/characters')
+    axios.get('http://localhost:5555/characters')
     .then(res => {
       setCharacters(res.data)
     })
@@ -25,7 +25,7 @@ function App() {
   }, []);
 
 const createCharacter = (newCharacter) => {
-  axios.post('http://localhost:3000/characters', newCharacter)
+  axios.post('http://localhost:5555/characters', newCharacter)
   .then(res => {
     setCharacters(prevCharacters => [...prevCharacters, res.data])
   })
