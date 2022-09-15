@@ -139,6 +139,17 @@
         "He's held us here for weeks questioning us about our favorite sports and quirky behavior. We've tried to tell him as little as possible."
       ],
       "id": 9
+    },
+    {
+      "displayName": "Finn",
+      "fullName": "Finn",
+      "sprite": "https://res.cloudinary.com/dtengdkya/image/upload/v1663197999/j3xkbbaz6thucfeihjdo.webp",
+      "species": "Human",
+      "sex": "Male",
+      "quotes": [
+        "Hello"
+      ],
+      "id": 10
     }
   ]
 }

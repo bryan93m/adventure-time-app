@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function CharacterCard({character}) {
     const quotes = character.quotes

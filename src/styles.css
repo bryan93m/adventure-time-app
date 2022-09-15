@@ -102,8 +102,6 @@ h4 {
   font-family: 'Staatliches', cursive;
 }
 
-
-
 .quotes {
   font-weight: regular;
   font-size: 14px;
@@ -145,6 +143,16 @@ img {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  font-family: 'Staatliches';
+  font-size: 1.5rem;
 }
 
 /* search styles */
@@ -340,7 +348,6 @@ video{
 .school{
   font-family: 'Staatliches';
   font-size: 1.5rem;
-  
 }
 
 .schoolyear {
