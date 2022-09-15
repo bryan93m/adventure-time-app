@@ -15,6 +15,24 @@
         "Homies help homies. Always."
       ],
       "sprite": "https://i.imgur.com/zLEMgTB.png",
+      "comments": [
+        {
+          "name": "",
+          "comment": ""
+        },
+        {
+          "name": "Megan",
+          "comment": "Cool"
+        },
+        {
+          "name": "Jim",
+          "comment": "My favorite!"
+        },
+        {
+          "name": "Bob",
+          "comment": "Love this"
+        }
+      ]
     },
     {
       "id": 1,
@@ -28,7 +46,13 @@
         "Suckin' at something is the first step to being sorta good at something.",
         "To live life, you need problems. If you get everything you want the minute you want it, then what's the point of livin'?"
       ],
-      "sprite": "https://i.imgur.com/oOuaFDI.png"
+      "sprite": "https://i.imgur.com/oOuaFDI.png",
+      "comments": [
+        {
+          "name": "Liam",
+          "comment": "This guy is great!"
+        }
+      ]
     },
     {
       "id": 2,
@@ -42,7 +66,13 @@
         "Maybe the lesson is that when you are grown, you won't ever be able to tell if everything is going totally haywire or if truly everything is perfectly fine.",
         "Your eyeballs think the sky is blue, but that's just sun rays farting apart in the barf of our atmosphere. The sky is black."
       ],
-      "sprite": "https://i.imgur.com/saWFJ90.png"
+      "sprite": "https://i.imgur.com/saWFJ90.png",
+      "comments": [
+        {
+          "name": "Morgan",
+          "comment": "More batteries!"
+        }
+      ]
     },
     {
       "id": 3,
@@ -56,7 +86,13 @@
         "You can't break royal promises! Never, ever, never, no matter what, forever!",
         "People get built different. We don't need to figure it out, we just need to respect it."
       ],
-      "sprite": "https://i.imgur.com/KYiPIt4.png"
+      "sprite": "https://i.imgur.com/KYiPIt4.png",
+      "comments": [
+        {
+          "name": "Riley",
+          "comment": "So cute!"
+        }
+      ]
     },
     {
       "id": 4,
@@ -70,7 +106,13 @@
         "I don't think there are bad people. I think good people do bad stuff sometimes, and that's bad. But if you just do it once, that's a mistake. And that's not bad.",
         "Everything repeats over and over again. No one learns anything, because no one lives long enough to see the pattern."
       ],
-      "sprite": "https://i.imgur.com/L2bWMYR.png"
+      "sprite": "https://i.imgur.com/L2bWMYR.png",
+      "comments": [
+        {
+          "name": "Katie",
+          "comment": "Vampire Queen forever!"
+        }
+      ]
     },
     {
       "id": 5,
@@ -138,7 +180,13 @@
       "quotes": [
         "He's held us here for weeks questioning us about our favorite sports and quirky behavior. We've tried to tell him as little as possible."
       ],
-      "id": 9
+      "id": 9,
+      "comments": [
+        {
+          "name": "Henry",
+          "comment": "She's still cute"
+        }
+      ]
     }
   ]
 }

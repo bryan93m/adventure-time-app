@@ -14,6 +14,7 @@ import SplashPage from './pages/SlashPage';
 
 function App() {
   const [characters, setCharacters] = useState([]);
+  const [comments, setComments] = useState([])
 
   useEffect(() => {
     axios.get('http://localhost:5555/characters')
@@ -30,11 +31,13 @@ const createCharacter = (newCharacter) => {
   })
 }
 
-const createComment = (newComment, id) => {
-  console.log(newComment, id)
-  axios.patch(`http://localhost:3000/characters/${id}`, newComment)
-    .then(res => res.json())
-    .then(data => console.log(data))
+const createComment = (newComment, character) => {
+  let id = character.id 
+  const patchBody = character.comments ? 
+    ({ comments: [...character.comments, newComment] }) 
+    : 
+    ({comments : [newComment]})
+    axios.patch(`http://localhost:5555/characters/${id}`, patchBody)
 }
 
   return (

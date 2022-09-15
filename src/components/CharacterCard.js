@@ -32,7 +32,7 @@ function CharacterCard({character, createComment}) {
         createComment({
             name: formData.name,
             comment: formData.comment,
-        }, character.id)
+        }, character)
         setFormData(commentData)
     }
 
@@ -64,8 +64,7 @@ function CharacterCard({character, createComment}) {
                     }
                     {toggleComments ? (
                         <div>
-                            <p>Name: {character.name}</p>
-                            <p>Comment: {character.comment}</p>
+                            {character.comments ? (character.comments.map(comment => <div key={comment.name}><p>Name: {comment.name}</p><p>Comment: {comment.comment}</p></div>)) : null}
                             <form onSubmit={handleSubmit}>
                                 <input 
                                     type="text"
@@ -81,7 +80,7 @@ function CharacterCard({character, createComment}) {
                                     onChange={handleChange}
                                     value={formData.comment}
                                 />
-                                <button type="submit">Submit Comment</button>
+                                <button className="toggle-button" type="submit">Submit Comment</button>
                             </form>
                         </div>)
                         :

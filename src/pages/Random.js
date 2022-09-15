@@ -19,6 +19,7 @@ const Random = ({characters}) => {
           if (character.id === chosenCharacterId) {
             return <CharacterCard key={character.id} character={character} />
            }
+           return null
         })}
       </div>
     </>
