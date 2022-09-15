@@ -169,7 +169,13 @@
         "It's only okay if the person making the fun is someone I'm cool with! And they do it in a respectful and knowing way!",
         "Uh, do we need a torch? I'm sorta made of fire."
       ],
-      "sprite": "https://i.imgur.com/8DCrCta.png"
+      "sprite": "https://i.imgur.com/8DCrCta.png",
+      "comments": [
+        {
+          "name": "George",
+          "comment": "Firepower!"
+        }
+      ]
     },
     {
       "displayName": "SP",
