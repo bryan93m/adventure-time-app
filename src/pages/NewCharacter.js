@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import axios from 'axios';
+import {motion} from 'framer-motion';
 
 const defaultCharacter = {
     displayName: '',
@@ -59,7 +60,12 @@ function handleChange(e){
     }
   
   return (
-    <div>
+    <motion.div
+    initial={{width: 0}} 
+    animate={{width: '100%'}} 
+    exit={{x: window.innerWidth}}
+        
+    >
         <h1>New Character</h1>
         <form onSubmit={handleSubmit} className='new__container'>
             <input
@@ -106,7 +112,7 @@ function handleChange(e){
             />
             <button className='form__button' type='submit'>Add Character</button>
         </form>
-    </div>
+    </motion.div>
   )
 }
 

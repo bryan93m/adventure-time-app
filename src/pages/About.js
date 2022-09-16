@@ -1,11 +1,16 @@
 import megPic from "../pages/assets/meadventuretime.png"
-import lemon from "../pages/assets/lemongrab.jpg"
-import bryanPic from "../pages/assets/bryanPic.png"
 import TeejayPic from "../pages/assets/TeejayPic.png"
+import bryanPic from "../pages/assets/bryanPic.png"
+import {motion} from 'framer-motion'
 
 const About = () => {
   return (
-    <div className='about'>
+    <motion.div 
+    className='about'
+    initial={{width: 0}} 
+    animate={{width: '100%'}} 
+    exit={{x: window.innerWidth}}    
+    >
         
         <div className='about__info'>
             <h3>ABOUT PAGE</h3>
@@ -21,7 +26,7 @@ const About = () => {
                   </li>
                   <li className="person">
                     <h4>Teejay Dixon</h4>
-                    <img className="profile-pic" src={TeejayPic} alt="lemongrab" />
+                    <img className="profile-pic" src={TeejayPic} alt="Teejay" />
                     <a href="https://github.com/TeejayDixon">Teejay's Github</a>
                   </li>
                   <li className="person">
@@ -32,7 +37,7 @@ const About = () => {
               </ul>
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 

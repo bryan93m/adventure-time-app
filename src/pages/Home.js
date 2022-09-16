@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import Footer from '../components/Footer';
 import CharacterCard from '../components/CharacterCard';
+import {motion} from 'framer-motion';
 
 
 function Home({characters, createComment}) {
@@ -20,7 +21,12 @@ function Home({characters, createComment}) {
 
     return (
         <>
-        <div className="homepage">
+        <motion.div 
+        className="homepage" 
+        initial={{width: 0}} 
+        animate={{width: '100%'}} 
+        exit={{x: window.innerWidth}}
+        >
             <div className="checkbox">
                 <label>Filter by name: <input type="checkbox" onClick={(e) => changeFilter(e)}/></label>
             </div>  
@@ -29,7 +35,7 @@ function Home({characters, createComment}) {
                     <CharacterCard key={character.id} character={character} createComment={createComment} />
                 ))}
             </div>          
-        </div>
+        </motion.div>
         <Footer className='footer__component' />
         </>
     );
