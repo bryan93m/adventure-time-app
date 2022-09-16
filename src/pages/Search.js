@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import SearchBar from '../components/SearchBar'
 import SearchItems from '../components/SearchItems'
+import {motion} from 'framer-motion'
 
 
 
@@ -17,7 +18,11 @@ const Search = ({characters}) => {
   })
 
   return (
-    <>
+    <motion.div
+    initial={{width: 0}} 
+    animate={{width: '100%'}} 
+    exit={{x: window.innerWidth}}
+    >
         <h1>Search</h1>
         <div className='search__list'>
             <SearchBar search={search} onSearch={setSearch}/>
@@ -25,7 +30,7 @@ const Search = ({characters}) => {
              <SearchItems characters={displayCharacters}/>
             </div>
         </div>
-    </>
+    </motion.div>
   )
 }
 

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import CharacterCard from '../components/CharacterCard'
-
+import {motion} from 'framer-motion'
 const Random = ({characters}) => {
   const [chosenCharacterId, setChosenCharacterId] = useState(0)
 
@@ -9,7 +9,11 @@ const Random = ({characters}) => {
   }
 
   return (
-    <>
+    <motion.div
+    initial={{width: 0}} 
+    animate={{width: '100%'}} 
+    exit={{x: window.innerWidth}}    
+    >
     <div className='random__header'>
         <h1>Random</h1>
         <button className='form__button' onClick={handleClick}>Randomize!</button>  
@@ -22,7 +26,7 @@ const Random = ({characters}) => {
            return null
         })}
       </div>
-    </>
+    </motion.div>
   )
 }
 
